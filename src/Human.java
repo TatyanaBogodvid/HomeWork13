@@ -9,15 +9,16 @@ public class Human {
         if (yearOfBirth >= 0){
         this.yearOfBirth = yearOfBirth;}
         else {this.yearOfBirth = 0;}
-        if (name != null || name != ""){
-        this.name = name;}
-        else{
-            System.out.println("Информация не указана");
+        if (name == null || name.isEmpty()){
+            this.name = "Информация не указана";
         }
-        if (town != null || town != ""){
-        this.town = town;}
         else{
-            System.out.println("Информация не указана");
+            this.name = name;
+        }
+        if (town == null || town.isEmpty()){
+        this.town = "Информация не указана";}
+        else{
+            this.town = town;
         }
     }
 
@@ -25,20 +26,20 @@ public class Human {
         if (yearOfBirth >= 0){
             this.yearOfBirth = yearOfBirth;}
         else {this.yearOfBirth = 0;}
-        if (name != null || name != ""){
-            this.name = name;}
+        if (name == null || name.isEmpty()){
+            this.name = "Информация не указана";}
         else{
-            System.out.println("Информация не указана");
+            this.name = name;
         }
-        if (town != null || town != ""){
-            this.town = town;}
+        if (town == null || town.isEmpty()){
+            this.town = "Информация не указана";}
         else{
-            System.out.println("Информация не указана");
+            this.town = town;
         }
-        if (jobTitle != null || jobTitle != ""){
-        this.jobTitle = jobTitle;}
+        if (jobTitle == null || jobTitle.isEmpty()){
+        this.jobTitle = "Информация не указана";}
         else{
-            System.out.println("Информация не указана");
+            this.jobTitle = jobTitle;
         }
     }
 
@@ -56,6 +57,22 @@ public class Human {
 
     public String getJobTitle() {
         return this.jobTitle;
+    }
+
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public void printHello(){
